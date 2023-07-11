@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 //import Toggle from "./components/Toggle";
-import DarkMode from "./components/Darkmode";
-import Header from "./components/header";
+//import DarkMode from "./components/Darkmode";
+import Header from "./pages/Header";
 import NavBar from "./components/NavBar";
 import Footer from "./components/footer";
 import AboutMe from "./pages/AboutMe";
@@ -23,7 +23,9 @@ function App() {
                     <Route path="/portfolio" element={<Portfolio/>} />
                     <Route path="/resume" element ={<Resume/>} />
                     
+                    
                 </Routes>
+                <Footer/>
             
         </BrowserRouter>
         </>
