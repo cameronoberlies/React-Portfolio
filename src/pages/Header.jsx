@@ -17,6 +17,7 @@ import {
   } from 'react-icons/io5';
   import { ReactElement } from 'react';
   import PropTypes from 'prop-types';
+  import React from 'react';
 
   
   Feature.propTypes = {
