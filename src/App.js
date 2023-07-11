@@ -3,22 +3,23 @@ import "./App.css";
 //import Toggle from "./components/Toggle";
 //import DarkMode from "./components/Darkmode";
 import Header from "./pages/Header";
-import NavBar from "./components/NavBar";
-import Footer from "./components/footer";
+
+
 import AboutMe from "./pages/AboutMe";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import Resume from "./pages/Resume";
+import Footer from "./components/footer";
 
 
 function App() {
     return (
         <>
         <BrowserRouter>
-            <NavBar/>
+            <Header/>
                 <Routes>
-                    <Route path="/" element={<Header/>} />
-                    <Route path="/aboutme" element={<AboutMe/>} />
+                    
+                    <Route path="/" element={<AboutMe/>} />
                     <Route path="/contact" element={<Contact/>} />
                     <Route path="/portfolio" element={<Portfolio/>} />
                     <Route path="/resume" element ={<Resume/>} />
@@ -26,6 +27,7 @@ function App() {
                     
                 </Routes>
                 <Footer/>
+                
             
         </BrowserRouter>
         </>
