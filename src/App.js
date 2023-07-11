@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Toggle from "./components/Toggle";
+//import Toggle from "./components/Toggle";
 import DarkMode from "./components/Darkmode";
 import Header from "./components/header";
 import NavBar from "./components/NavBar";

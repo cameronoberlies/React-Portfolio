@@ -18,6 +18,7 @@ import {
   } from '@chakra-ui/react';
   import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
   import { MdLocalShipping } from 'react-icons/md';
+  import React from 'react';
   
   export default function AboutMe() {
     return (
