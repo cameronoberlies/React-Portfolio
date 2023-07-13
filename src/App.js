@@ -3,7 +3,7 @@ import "./App.css";
 //import Toggle from "./components/Toggle";
 //import DarkMode from "./components/Darkmode";
 import Header from "./pages/Header";
-
+import 'atropos/css';
 
 import AboutMe from "./pages/AboutMe";
 import Contact from "./pages/Contact";

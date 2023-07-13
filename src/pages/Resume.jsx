@@ -1,18 +1,52 @@
-import { Container, Text, useColorModeValue, fontSize} from "@chakra-ui/react";
+import {
+  Container,
+  Text,
+  useColorModeValue,
+  fontSize,
+  Link,
+} from "@chakra-ui/react";
 import React from "react";
+import { FiDownload } from 'react-icons/fi';
+import resume from "../utils/Resume.pdf";
+import { Document, Page, pdfjs } from "react-pdf";
+import pdfjsWorker from "react-pdf/node_modules/pdfjs-dist/build/pdf.worker.entry";
+// import worker from 'pdfjs-dist/webpack';
+// pdfjs.GlobalWorkerOptions.workerSrc = worker;
 
 function Resume() {
+  const handleDownload = () => {
+    window.open(resume, "_blank");
+  };
   return (
     <Container
       color={useColorModeValue("gray.500", "gray.400")}
       fontSize={"1xl"}
       fontWeight={"300"}
     >
-      <Text fontSize={"lg"}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid
-        amet at delectus doloribus dolorum expedita hic, ipsum maxime modi nam
-        officiis porro, quae, quisquam quos reprehenderit velit? Natus, totam.
-      </Text>
+      <Link
+        color={useColorModeValue("blue.500", "blue.200")}
+        onClick={handleDownload}
+        download
+        style={{ display: "flex", alignItems: "center" }}
+      >
+        <FiDownload size={20} style={{ marginRight: "5px" }} />
+        <span>Download Resume</span>
+      </Link>
+
+      <Document
+        file={resume}
+        onLoadError={console.error}
+        style={{ width: "100vw", height: "auto" }}
+      >
+        <Page pageIndex={0} />
+      </Document>
+      <Link
+        color={useColorModeValue("blue.500", "blue.200")}
+        onClick={handleDownload}
+        download
+      >
+        Download Resume
+      </Link>
     </Container>
   );
 }

@@ -17,6 +17,7 @@ import {
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { MdLocalShipping } from "react-icons/md";
 import React from "react";
+import Atropos from "atropos/react";
 
 export default function AboutMe() {
   return (
@@ -26,19 +27,12 @@ export default function AboutMe() {
         spacing={{ base: 8, md: 10 }}
         py={{ base: 18, md: 24 }}
       >
-        <Flex>
-          <Image
-            rounded={"md"}
-            alt={"product image"}
-            src={
-              "https://images.unsplash.com/photo-1597733336794-12d05021d510?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1548&q=80"
-            }
-            fit={"cover"}
-            align={"center"}
-            w={"100%"}
-            h={{ base: "100%", sm: "400px", lg: "500px" }}
-          />
-        </Flex>
+        <div id="app">
+          <Atropos className="my-atropos">
+            <img src="https://images.unsplash.com/photo-1597733336794-12d05021d510?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1548&q=80"></img>
+          </Atropos>
+        </div>
+
         <Stack spacing={{ base: 6, md: 10 }}>
           <Box as={"header"}>
             <Heading
@@ -79,31 +73,28 @@ export default function AboutMe() {
                 designing robust server-side solutions, I am dedicated to
                 delivering high-quality web applications that meet user needs
                 and drive business success.
-                </Text> 
-                <Text
+              </Text>
+              <Text
                 color={useColorModeValue("gray.500", "gray.400")}
                 fontSize={"1xl"}
                 fontWeight={"300"}
               >
-                
-                 On the front-end, I am proficient in
-                HTML, CSS, and JavaScript, leveraging modern frameworks like
-                React to build interactive user interfaces that are both
-                intuitive and visually appealing. I have a keen eye for design
-                and strive to create seamless user experiences that engage and
-                delight. 
-                </Text> 
-                <Text
+                On the front-end, I am proficient in HTML, CSS, and JavaScript,
+                leveraging modern frameworks like React to build interactive
+                user interfaces that are both intuitive and visually appealing.
+                I have a keen eye for design and strive to create seamless user
+                experiences that engage and delight.
+              </Text>
+              <Text
                 color={useColorModeValue("gray.500", "gray.400")}
                 fontSize={"1xl"}
                 fontWeight={"300"}
               >
-                
                 In the back-end realm, I am experienced in server-side
-                programming languages such as Node.js, along with
-                frameworks like Express. I am adept at designing and
-                implementing RESTful APIs, working with databases, and ensuring
-                the security and efficiency of server-side operations.
+                programming languages such as Node.js, along with frameworks
+                like Express. I am adept at designing and implementing RESTful
+                APIs, working with databases, and ensuring the security and
+                efficiency of server-side operations.
               </Text>
               <Text fontSize={"lg"}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
@@ -119,20 +110,17 @@ export default function AboutMe() {
                 fontWeight={"500"}
                 textTransform={"uppercase"}
                 mb={"4"}
-              >
-                Features
-              </Text>
+              ></Text>
 
               <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                 <List spacing={2}>
-                  <ListItem>Chronograph</ListItem>
-                  <ListItem>Master Chronometer Certified</ListItem>{" "}
-                  <ListItem>Tachymeter</ListItem>
+                  <ListItem>Text here</ListItem>
+                  <ListItem>Text here</ListItem> <ListItem>Text here</ListItem>
                 </List>
                 <List spacing={2}>
-                  <ListItem>Anti‑magnetic</ListItem>
-                  <ListItem>Chronometer</ListItem>
-                  <ListItem>Small seconds</ListItem>
+                  <ListItem>Text here</ListItem>
+                  <ListItem>Text here</ListItem>
+                  <ListItem>Text here</ListItem>
                 </List>
               </SimpleGrid>
             </Box>
@@ -143,78 +131,36 @@ export default function AboutMe() {
                 fontWeight={"500"}
                 textTransform={"uppercase"}
                 mb={"4"}
-              >
-                Product Details
-              </Text>
+              ></Text>
 
               <List spacing={2}>
                 <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}>
-                    Between lugs:
-                  </Text>{" "}
-                  20 mm
+                  <Text as={"span"} fontWeight={"bold"}></Text>{" "}
                 </ListItem>
                 <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}>
-                    Bracelet:
-                  </Text>{" "}
-                  leather strap
+                  <Text as={"span"} fontWeight={"bold"}></Text>{" "}
                 </ListItem>
                 <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}>
-                    Case:
-                  </Text>{" "}
-                  Steel
+                  <Text as={"span"} fontWeight={"bold"}></Text>{" "}
                 </ListItem>
                 <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}>
-                    Case diameter:
-                  </Text>{" "}
-                  42 mm
+                  <Text as={"span"} fontWeight={"bold"}></Text>{" "}
                 </ListItem>
                 <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}>
-                    Dial color:
-                  </Text>{" "}
-                  Black
+                  <Text as={"span"} fontWeight={"bold"}></Text>{" "}
                 </ListItem>
                 <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}>
-                    Crystal:
-                  </Text>{" "}
-                  Domed, scratch‑resistant sapphire crystal with anti‑reflective
-                  treatment inside
+                  <Text as={"span"} fontWeight={"bold"}></Text>{" "}
                 </ListItem>
                 <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}>
-                    Water resistance:
-                  </Text>{" "}
-                  5 bar (50 metres / 167 feet){" "}
+                  <Text as={"span"} fontWeight={"bold"}></Text>{" "}
                 </ListItem>
               </List>
             </Box>
           </Stack>
 
-          <Button
-            rounded={"none"}
-            w={"full"}
-            mt={8}
-            size={"lg"}
-            py={"7"}
-            bg={useColorModeValue("gray.900", "gray.50")}
-            color={useColorModeValue("white", "gray.900")}
-            textTransform={"uppercase"}
-            _hover={{
-              transform: "translateY(2px)",
-              boxShadow: "lg",
-            }}
-          >
-            Add to cart
-          </Button>
-
           <Stack direction="row" alignItems="center" justifyContent={"center"}>
             <MdLocalShipping />
-            <Text>2-3 business days delivery</Text>
           </Stack>
         </Stack>
       </SimpleGrid>

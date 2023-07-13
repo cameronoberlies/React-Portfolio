@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Box, Flex, HStack, Image, Stack, Text } from "@chakra-ui/react";
+import Images from "../assets/images/image";
+
 
 const Portfolio = () => {
   const arrowStyles = {
@@ -23,7 +25,7 @@ const Portfolio = () => {
 
   const slides = [
     {
-      img: "https://images.pexels.com/photos/2599537/pexels-photo-2599537.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      img: "",
       label: "First Slide",
       description: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
     },
