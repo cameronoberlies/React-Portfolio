@@ -22,6 +22,9 @@ function Resume() {
       color={useColorModeValue("gray.500", "gray.400")}
       fontSize={"1xl"}
       fontWeight={"300"}
+      
+    
+      
     >
       <Link
         color={useColorModeValue("blue.500", "blue.200")}
@@ -37,15 +40,29 @@ function Resume() {
         file={resume}
         onLoadError={console.error}
         style={{ width: "100vw", height: "auto" }}
+        overflowX="auto"
+      maxW="100vw"
+      h="100%"
+      whiteSpace="nowrap"
+      pb="17px"
+      
+      px="32px"
+      sx={
+         { 
+        '::-webkit-scrollbar':{
+               display:'none'
+           }
+        }
+      }
       >
-        <Page pageIndex={0} />
+        <Page pageIndex={0} renderTextLayer={false} pageNumber={1} />
       </Document>
       <Link
         color={useColorModeValue("blue.500", "blue.200")}
         onClick={handleDownload}
         download
       >
-        Download Resume
+        
       </Link>
     </Container>
   );

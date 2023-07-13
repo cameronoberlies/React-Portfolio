@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, Flex, HStack, Image, Stack, Text } from "@chakra-ui/react";
-import Images from "../assets/images/image";
+import portfolio1 from "../assets/images/portfolio-pic-1.png";
 
 
 const Portfolio = () => {
@@ -25,7 +25,7 @@ const Portfolio = () => {
 
   const slides = [
     {
-      img: "",
+      img: portfolio1,
       label: "First Slide",
       description: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
     },
