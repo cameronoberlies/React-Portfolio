@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Box, Flex, HStack, Image, Stack, Text } from "@chakra-ui/react";
 import portfolio1 from "../assets/images/portfolio-pic-1.png";
+import portfolio2 from "../assets/images/portfolio-pic-2.png";
 
 
 const Portfolio = () => {
@@ -11,7 +12,7 @@ const Portfolio = () => {
     w: "auto",
     mt: "-22px",
     p: "16px",
-    color: "white",
+    color: "black",
     fontWeight: "bold",
     fontSize: "18px",
     transition: "0.6s ease",
@@ -26,13 +27,15 @@ const Portfolio = () => {
   const slides = [
     {
       img: portfolio1,
-      label: "First Slide",
-      description: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+      label: "Paws, Claws, and Tails",
+      description: "Pet Adoption and Volunteer App",
+      link: "https://paws-claws-and-tails.herokuapp.com/"
     },
     {
-      img: "https://images.pexels.com/photos/2714581/pexels-photo-2714581.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      label: "Second Slide",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      img: portfolio2,
+      label: "Paws, Claws, and Tails",
+      description: "",
+      link: "https://paws-claws-and-tails.herokuapp.com/"
     },
     {
       img: "https://images.pexels.com/photos/2878019/pexels-photo-2878019.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
@@ -92,12 +95,14 @@ const Portfolio = () => {
               >
                 {sid + 1} / {slidesCount}
               </Text>
+              < a href={slide.link} target="_blank" >
               <Image
                 src={slide.img}
                 alt="carousel image"
                 boxSize="full"
                 backgroundSize="cover"
               />
+              </a>
               <Stack
                 p="8px 12px"
                 pos="absolute"
@@ -107,8 +112,10 @@ const Portfolio = () => {
                 mb="8"
                 color="white"
               >
-                <Text fontSize="2xl">{slide.label}</Text>
-                <Text fontSize="lg">{slide.description}</Text>
+                <a href={slide.link} target="_blank">
+                <Text fontSize="2xl" color="blackAlpha.700">{slide.label}</Text>
+                <Text fontSize="lg" color ="blackAlpha.700">{slide.description}</Text>
+                </a>
               </Stack>
             </Box>
           ))}
@@ -136,6 +143,7 @@ const Portfolio = () => {
           ))}
         </HStack>
       </Flex>
+      
     </Flex>
   );
 };

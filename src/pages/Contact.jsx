@@ -20,6 +20,7 @@ import { BsGithub, BsLinkedin,BsStackOverflow } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { useState, useRef } from "react";
 
+
 const confetti = {
   light: {
     primary: "4299E1", // blue.400
@@ -195,6 +196,7 @@ export default function Contact() {
                       <Input
                         type="text"
                         value={name}
+                        id="name"
                         onChange={(event) => setName(event.target.value)}
                         required
                       />
@@ -205,6 +207,7 @@ export default function Contact() {
 
                       <Input
                         type="email"
+                        id="email"
                         value={email}
                         onChange={(event) => setEmail(event.target.value)}
                         required
@@ -216,6 +219,7 @@ export default function Contact() {
 
                       <Textarea
                         value={message}
+                        id="message"
                         onChange={(event) => setMessage(event.target.value)}
                         required
                       />
