@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import "./App.css";
 //import Toggle from "./components/Toggle";
 //import DarkMode from "./components/Darkmode";
@@ -19,7 +19,8 @@ function App() {
             <Header/>
                 <Routes>
                     
-                    <Route path="/" element={<AboutMe/>} />
+                    
+                    <Route path="/" element={<AboutMe/>} index />
                     <Route path="/contact" element={<Contact/>} />
                     <Route path="/portfolio" element={<Portfolio/>} />
                     <Route path="/resume" element ={<Resume/>} />

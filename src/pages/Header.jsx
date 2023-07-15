@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 import {
   chakra,
   Link,
@@ -16,15 +16,10 @@ import {
   VStack,
   Button,
   useColorMode,
-  SimpleGrid,
-  Stack,
 } from "@chakra-ui/react";
 
 //import { useViewportScroll } from "framer-motion";
-
-import { IoIosArrowDown } from "react-icons/io";
-import { AiFillHome, AiOutlineInbox, AiOutlineMenu } from "react-icons/ai";
-import { BsFillCameraVideoFill } from "react-icons/bs";
+import { AiOutlineMenu } from "react-icons/ai";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { Logo } from "@choc-ui/logo";
 
@@ -36,11 +31,13 @@ const Header = () => {
   const myRef = useRef(null);
   const [y, setY] = React.useState(0);
   const height = myRef.current ? myRef.current.getBoundingClientRect() : 0;
+  const location = useLocation();
+  const activeColor = useColorModeValue("white", "white");
+  const inactiveColor = useColorModeValue("gray.500", "gray.200");
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
 
-//   const { scrollY } = useViewportScroll();
-//   React.useEffect(() => {
-//     return scrollY.onChange(() => setY(scrollY.get()));
-//   }, [scrollY]);
   const cl = useColorModeValue("gray.800", "white");
   const mobileNav = useDisclosure();
 
@@ -118,6 +115,7 @@ const Header = () => {
       />
    
     </VStack>
+     
   );
   return (
     <React.Fragment>
@@ -153,8 +151,8 @@ const Header = () => {
                     <Button
                       as={RouterLink}
                       to="/"
-                      bg={bg}
-                      color="gray.500"
+                      bg={isActive("/") ? activeColor : "transparent"}
+                      color={isActive("/") ? "black" : inactiveColor}
                       display="inline-flex"
                       alignItems="center"
                       fontSize="md"
@@ -176,8 +174,8 @@ const Header = () => {
                 <Button
                   as={RouterLink}
                   to="/contact"
-                  bg={bg}
-                  color="gray.500"
+                  bg={isActive("/contact") ? activeColor : "transparent"}
+                  color={isActive("/contact") ? "black" : inactiveColor}
                   display="inline-flex"
                   alignItems="center"
                   fontSize="md"
@@ -189,8 +187,8 @@ const Header = () => {
                 <Button
                   as={RouterLink}
                   to="/resume"
-                  bg={bg}
-                  color="gray.500"
+                  bg={isActive("/resume") ? activeColor : "transparent"}
+                  color={isActive("/resume") ? "black" : inactiveColor}
                   display="inline-flex"
                   alignItems="center"
                   fontSize="md"
@@ -202,8 +200,8 @@ const Header = () => {
                 <Button
                   as={RouterLink}
                   to="/portfolio"
-                  bg={bg}
-                  color="gray.500"
+                  bg={isActive("/portfolio") ? activeColor : "transparent"}
+                  color={isActive("/portfolio") ? "black" : inactiveColor}
                   display="inline-flex"
                   alignItems="center"
                   fontSize="md"

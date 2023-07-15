@@ -68,7 +68,7 @@ export default function AboutMe() {
               >
                 I am a full stack web developer with expertise in front-end and
                 back-end technologies. With a strong eye for design and a
-                problem -solving mindset, I enjoy creating seamless and engaging
+                problem-solving mindset, I enjoy creating seamless and engaging
                 web experiences. From building intuitive user interfaces to
                 designing robust server-side solutions, I am dedicated to
                 delivering high-quality web applications that meet user needs
@@ -96,11 +96,13 @@ export default function AboutMe() {
                 APIs, working with databases, and ensuring the security and
                 efficiency of server-side operations.
               </Text>
-              <Text fontSize={"lg"}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-                aliquid amet at delectus doloribus dolorum expedita hic, ipsum
-                maxime modi nam officiis porro, quae, quisquam quos
-                reprehenderit velit? Natus, totam.
+              <Text color={useColorModeValue("gray.500", "gray.400")}
+                fontSize={"1xl"}
+                fontWeight={"300"}>
+               On a personal note, I have two dogs who I love to spend time outdoors 
+               with hiking, and swimming. I'm big into sports, I love to golf, play tennis 
+               and mountain bike and if I'm lucky enough I'll snowboard in the winter seasons. I 
+               enjoy relaxing either by reading or taking my paddle board out on the lake.
               </Text>
             </VStack>
             <Box>

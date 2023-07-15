@@ -7,8 +7,6 @@ import {
   Heading,
   IconButton,
   Input,
-  InputGroup,
-  InputLeftElement,
   Link,
   Stack,
   Textarea,
@@ -18,8 +16,8 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
-import { BsGithub, BsLinkedin, BsPerson, BsTwitter, BsStackOverflow } from "react-icons/bs";
-import { MdEmail, MdOutlineEmail } from "react-icons/md";
+import { BsGithub, BsLinkedin,BsStackOverflow } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
 import { useState, useRef } from "react";
 
 const confetti = {
@@ -231,7 +229,7 @@ export default function Contact() {
                       _hover={{
                         bg: "blue.500",
                       }}
-                      isFullWidth
+                      isfullwidth
                     >
                       Send Message
                     </Button>
