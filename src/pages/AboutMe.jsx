@@ -114,58 +114,16 @@ export default function AboutMe() {
                 mb={"4"}
               ></Text>
 
-              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-                <List spacing={2}>
-                  <ListItem>Text here</ListItem>
-                  <ListItem>Text here</ListItem> <ListItem>Text here</ListItem>
-                </List>
-                <List spacing={2}>
-                  <ListItem>Text here</ListItem>
-                  <ListItem>Text here</ListItem>
-                  <ListItem>Text here</ListItem>
-                </List>
-              </SimpleGrid>
+              
             </Box>
-            <Box>
-              <Text
-                fontSize={{ base: "16px", lg: "18px" }}
-                color={useColorModeValue("yellow.500", "yellow.300")}
-                fontWeight={"500"}
-                textTransform={"uppercase"}
-                mb={"4"}
-              ></Text>
-
-              <List spacing={2}>
-                <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}></Text>{" "}
-                </ListItem>
-                <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}></Text>{" "}
-                </ListItem>
-                <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}></Text>{" "}
-                </ListItem>
-                <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}></Text>{" "}
-                </ListItem>
-                <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}></Text>{" "}
-                </ListItem>
-                <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}></Text>{" "}
-                </ListItem>
-                <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}></Text>{" "}
-                </ListItem>
-              </List>
-            </Box>
+            
           </Stack>
 
           <Stack direction="row" alignItems="center" justifyContent={"center"}>
-            <MdLocalShipping />
+            
           </Stack>
         </Stack>
       </SimpleGrid>
     </Container>
   );
-}
+};
