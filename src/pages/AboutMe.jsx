@@ -14,8 +14,6 @@ import {
   List,
   ListItem,
 } from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
-import { MdLocalShipping } from "react-icons/md";
 import React from "react";
 import Atropos from "atropos/react";
 
@@ -99,10 +97,7 @@ export default function AboutMe() {
               <Text color={useColorModeValue("gray.500", "gray.400")}
                 fontSize={"1xl"}
                 fontWeight={"300"}>
-               On a personal note, I have two dogs who I love to spend time outdoors 
-               with hiking, and swimming. I'm big into sports, I love to golf, play tennis 
-               and mountain bike and if I'm lucky enough I'll snowboard in the winter seasons. I 
-               enjoy relaxing either by reading or taking my paddle board out on the lake.
+               
               </Text>
             </VStack>
             <Box>
