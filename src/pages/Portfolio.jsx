@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Box, Flex, HStack, Image, Stack, Text } from "@chakra-ui/react";
-import portfolio1 from "../assets/images/portfolio-pic-1.png";
-import portfolio2 from "../assets/images/portfolio-pic-2.png";
+
+
 
 
 const Portfolio = () => {
@@ -26,16 +26,16 @@ const Portfolio = () => {
 
   const slides = [
     {
-      img: portfolio1,
-      label: "Paws, Claws, and Tails",
-      description: "Pet Adoption and Volunteer App",
-      link: "https://paws-claws-and-tails.herokuapp.com/"
+      img: "https://github.com/cameronoberlies/Paws-Claws-and-Tails/blob/main/screenshots/screenshot_login.png?raw=true",
+      label: <a href="https://github.com/cameronoberlies/Paws-Claws-and-Tails/blob/main/screenshots/screenshot_login.png?raw=true" target="_blank" rel="noopener noreferrer">Paws, Claws, and Tails</a>,
+      description: < a href="https://github.com/cameronoberlies/Paws-Claws-and-Tails" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+      
     },
     {
-      img: portfolio2,
-      label: "Paws, Claws, and Tails",
-      description: "",
-      link: "https://paws-claws-and-tails.herokuapp.com/"
+      img: "https://github.com/cameronoberlies/Paws-Claws-and-Tails/raw/main/screenshots/screenshot_gallery.png",
+      label: <a href="https://github.com/cameronoberlies/Paws-Claws-and-Tails/blob/main/screenshots/screenshot_gallery.png?raw=true" target="_blank" rel="noopener noreferrer">Paws, Claws, and Tails</a>,
+
+      description: < a href="https://github.com/cameronoberlies/Paws-Claws-and-Tails" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
     },
     {
       img: "https://images.pexels.com/photos/2878019/pexels-photo-2878019.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
@@ -75,76 +75,77 @@ const Portfolio = () => {
 
   return (
     <Flex
-      w="full"
-      bg="#edf3f8"
-      _dark={{ bg: "#3e3e3e" }}
-      p={10}
-      alignItems="center"
-      justifyContent="center"
-    >
-      <Flex w="full" pos="relative" overflow="hidden">
-        <Flex h="400px" w="full" {...carouselStyle}>
-          {slides.map((slide, sid) => (
-            <Box key={`slide-${sid}`} boxSize="full" shadow="md" flex="none">
-              <Text
-                color="white"
-                fontSize="xs"
-                p="8px 12px"
-                pos="absolute"
-                top="0"
-              >
-                {sid + 1} / {slidesCount}
-              </Text>
-              < a href={slide.link} target="_blank" >
+    w="full"
+    bg="#edf3f8"
+    _dark={{ bg: "#3e3e3e" }}
+    p={10}
+    alignItems="center"
+    justifyContent="center"
+  >
+    <Flex w="full" pos="relative" overflow="hidden">
+      <Flex h="400px" w="full" {...carouselStyle}>
+        {slides.map((slide, sid) => (
+          <Box key={`slide-${sid}`} boxSize="full" shadow="md" flex="none">
+            <Text
+              color="white"
+              fontSize="xs"
+              p="8px 12px"
+              pos="absolute"
+              top="0"
+            >
+              {sid + 1} / {slidesCount}
+            </Text>
+            <a href={slide.description} target="_blank" rel="noopener noreferrer">
               <Image
                 src={slide.img}
                 alt="carousel image"
                 boxSize="full"
                 backgroundSize="cover"
               />
+            </a>
+            <Stack
+              p="8px 12px"
+              pos="absolute"
+              bottom="24px"
+              textAlign="center"
+              w="full"
+              mb="8"
+              color="white"
+              bg="rgba(0, 0, 0, 0.6)" // Add semi-transparent background to the text elements
+              borderRadius="md" // Optional: add rounded corners to the background
+            >
+              <a href={slide.description} target="_blank" rel="noopener noreferrer">
+                <Text fontSize="2xl" color="white"> {slide.label}</Text>
+                <Text fontSize="lg" color="white" mt="2"> {slide.description}</Text>
               </a>
-              <Stack
-                p="8px 12px"
-                pos="absolute"
-                bottom="24px"
-                textAlign="center"
-                w="full"
-                mb="8"
-                color="white"
-              >
-                <a href={slide.link} target="_blank">
-                <Text fontSize="2xl" color="blackAlpha.700">{slide.label}</Text>
-                <Text fontSize="lg" color ="blackAlpha.700">{slide.description}</Text>
-                </a>
-              </Stack>
-            </Box>
-          ))}
-        </Flex>
-        <Text {...arrowStyles} left="0" onClick={prevSlide}>
-          &#10094;
-        </Text>
-        <Text {...arrowStyles} right="0" onClick={nextSlide}>
-          &#10095;
-        </Text>
-        <HStack justify="center" pos="absolute" bottom="8px" w="full">
-          {Array.from({ length: slidesCount }).map((_, slide) => (
-            <Box
-              key={`dots-${slide}`}
-              cursor="pointer"
-              boxSize={["7px", null, "15px"]}
-              m="0 2px"
-              bg={currentSlide === slide ? "blackAlpha.800" : "blackAlpha.500"}
-              rounded="50%"
-              display="inline-block"
-              transition="background-color 0.6s ease"
-              _hover={{ bg: "blackAlpha.800" }}
-              onClick={() => setSlide(slide)}
-            ></Box>
-          ))}
-        </HStack>
+            </Stack>
+          </Box>
+        ))}
       </Flex>
-      
+      <Text {...arrowStyles} left="0" onClick={prevSlide}>
+        &#10094;
+      </Text>
+      <Text {...arrowStyles} right="0" onClick={nextSlide}>
+        &#10095;
+      </Text>
+      <HStack justify="center" pos="absolute" bottom="8px" w="full">
+        {Array.from({ length: slidesCount }).map((_, slide) => (
+          <Box
+            key={`dots-${slide}`}
+            cursor="pointer"
+            boxSize={["7px", null, "15px"]}
+            m="0 2px"
+            bg={currentSlide === slide ? "blackAlpha.800" : "blackAlpha.500"}
+            rounded="50%"
+            display="inline-block"
+            transition="background-color 0.6s ease"
+            _hover={{ bg: "blackAlpha.800" }}
+            onClick={() => setSlide(slide)}
+          ></Box>
+        ))}
+      </HStack>
     </Flex>
+  </Flex>
   );
 };
 export default Portfolio;

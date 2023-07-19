@@ -10,6 +10,7 @@ import {
   Link,
   Stack,
   Textarea,
+  Text,
   Tooltip,
   useClipboard,
   useColorModeValue,
@@ -129,11 +130,13 @@ export default function Contact() {
                     isRound
                   >
                     <input
+                    
                       ref={emailRef}
                       value="cameron.oberlies@outlook.com" 
                       readOnly
                       style={{ position: "absolute", opacity: 0 }}
                     />
+                    
                   </IconButton>
                 </Tooltip>
 
@@ -181,15 +184,15 @@ export default function Contact() {
                 </Link>
               </Stack>
 
-              <form onSubmit={handleSubmit}>
+              {/* <form onSubmit={handleSubmit}>
                 <Box
                   bg={useColorModeValue("white", "gray.700")}
                   borderRadius="lg"
                   p={8}
                   color={useColorModeValue("gray.700", "whiteAlpha.900")}
                   shadow="base"
-                >
-                  <VStack spacing={5}>
+                > */}
+                  {/* <VStack spacing={5}>
                     <FormControl isRequired>
                       <FormLabel>Name</FormLabel>
 
@@ -237,9 +240,9 @@ export default function Contact() {
                     >
                       Send Message
                     </Button>
-                  </VStack>
-                </Box>
-              </form>
+                  </VStack> */}
+                {/* </Box>
+              </form> */}
             </Stack>
           </VStack>
         </Box>
