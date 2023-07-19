@@ -60,7 +60,7 @@ GitHub Repository: [Link to GitHub repository](https://www.github.com/youruserna
 
 - Email: cameron.oberlies@outlook.com
 - LinkedIn: [Link to LinkedIn profile](https://www.linkedin.com/in/yourusername/)
-- Portfolio: [Link to your portfolio website](https://cameronoberlies.github.io/)
+- Portfolio: [Portfolio link](https://cameronoberlies.github.io/)
 
 ## License
 
