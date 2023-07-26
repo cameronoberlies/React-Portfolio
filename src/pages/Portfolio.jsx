@@ -38,22 +38,24 @@ const Portfolio = () => {
       description: < a href="https://github.com/cameronoberlies/Paws-Claws-and-Tails" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
     },
     {
-      img: "https://images.pexels.com/photos/2878019/pexels-photo-2878019.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-      label: "Third Slide",
-      description:
-        "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
+      img: "https://github.com/cameronoberlies/PetGPT/blob/main/client/screenshots/243EBDA7-C6B9-4301-88D2-FA7770F0B626_1_105_c.jpeg?raw=true",
+      label: <a href="https://github.com/cameronoberlies/PetGPT/blob/main/client/screenshots/243EBDA7-C6B9-4301-88D2-FA7770F0B626_1_105_c.jpeg?raw=true" target="_blank" rel="noopener noreferrer">PetGPT</a>,
+      description: <a href="https://github.com/cameronoberlies/PetGPT" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+       
     },
     {
-      img: "https://images.pexels.com/photos/1142950/pexels-photo-1142950.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      label: "Fourth Slide",
-      description: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+      img: "https://github.com/cameronoberlies/PetGPT/blob/main/client/screenshots/4AD6CD31-2DC6-4EC4-9190-47E0C2639E64_1_105_c.jpeg?raw=true",
+      label: <a href="https://github.com/cameronoberlies/PetGPT/blob/main/client/screenshots/4AD6CD31-2DC6-4EC4-9190-47E0C2639E64_1_105_c.jpeg?raw=true" target="_blank" rel="noopener noreferrer">PetGPT</a>,
+      description: <a href="https://github.com/cameronoberlies/PetGPT" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
     },
     {
-      img: "https://images.pexels.com/photos/3124111/pexels-photo-3124111.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      label: "Fifth Slide",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      img: "https://github.com/cameronoberlies/PetGPT/blob/main/client/screenshots/D7A5FFD8-B8BF-4D88-B34B-65CD03FFBB22_1_105_c.jpeg?raw=true",
+      label: <a href="https://github.com/cameronoberlies/PetGPT/blob/main/client/screenshots/D7A5FFD8-B8BF-4D88-B34B-65CD03FFBB22_1_105_c.jpeg?raw=true" target ="_blank" rel="noopener noreferrer">PetGPT</a>,
+      description: <a href="https://github.com/cameronoberlies/PetGPT" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
     },
   ];
+
+  
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -86,6 +88,7 @@ const Portfolio = () => {
       <Flex h="400px" w="full" {...carouselStyle}>
         {slides.map((slide, sid) => (
           <Box key={`slide-${sid}`} boxSize="full" shadow="md" flex="none">
+            <Box pos="relative" h="400px" w="full">
             <Text
               color="white"
               fontSize="xs"
@@ -95,19 +98,30 @@ const Portfolio = () => {
             >
               {sid + 1} / {slidesCount}
             </Text>
-            <a href={slide.description} target="_blank" rel="noopener noreferrer">
+           
+           <a href={slide.description} target="_blank" rel="noopener noreferrer">
               <Image
                 src={slide.img}
                 alt="carousel image"
                 boxSize="full"
                 backgroundSize="cover"
+                display="block"
+                WebkitUserSelect="none"
+                margin="auto"
+                cursor="zoom-in"
+                backgroundColor="hsl(0, 0%, 90%)"
+                transition="background-color 300ms"
+                w="900px" 
+                h="590px"
               />
             </a>
+           </Box>
             <Stack
               p="8px 12px"
-              pos="absolute"
+               pos="absolute"
               bottom="24px"
               textAlign="center"
+              mt="10"
               w="full"
               mb="8"
               color="white"
@@ -149,3 +163,5 @@ const Portfolio = () => {
   );
 };
 export default Portfolio;
+
+
